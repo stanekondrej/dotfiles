@@ -1,0 +1,6 @@
+input * {
+	xkb_layout "cz"
+	accel_profile flat
+	pointer_accel -0.1
+}
+

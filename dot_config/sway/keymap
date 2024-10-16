@@ -1,0 +1,89 @@
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+
+# sway bindings
+	bindsym $mod+Shift+q kill
+	floating_modifier $mod normal
+	bindsym $mod+Shift+c reload
+	bindsym $mod+Shift+e exec swaymsg exit
+
+	## moving focus
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+
+	## moving windows
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+
+	## workspaces
+    bindsym $mod+plus workspace number 1
+    bindsym $mod+ecaron workspace number 2
+    bindsym $mod+scaron workspace number 3
+    bindsym $mod+ccaron workspace number 4
+    bindsym $mod+rcaron workspace number 5
+    bindsym $mod+zcaron workspace number 6
+    bindsym $mod+yacute workspace number 7
+    bindsym $mod+aacute workspace number 8
+    bindsym $mod+iacute workspace number 9
+    bindsym $mod+eacute workspace number 10
+
+	## move to workspaces
+    bindsym $mod+Shift+plus move container to workspace number 1
+    bindsym $mod+Shift+ecaron move container to workspace number 2
+    bindsym $mod+Shift+scaron move container to workspace number 3
+    bindsym $mod+Shift+ccaron move container to workspace number 4
+    bindsym $mod+Shift+rcaron move container to workspace number 5
+    bindsym $mod+Shift+zcaron move container to workspace number 6
+    bindsym $mod+Shift+yacute move container to workspace number 7
+    bindsym $mod+Shift+aacute move container to workspace number 8
+    bindsym $mod+Shift+iacute move container to workspace number 9
+    bindsym $mod+Shift+eacute move container to workspace number 10
+
+	## layout stuff
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+    bindsym $mod+f fullscreen
+    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+space focus mode_toggle
+    bindsym $mod+a focus parent
+
+	## scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+minus scratchpad show
+
+	## resizing
+	mode "resize" {
+    	bindsym $left resize shrink width 10px
+    	bindsym $down resize grow height 10px
+    	bindsym $up resize shrink height 10px
+    	bindsym $right resize grow width 10px
+		
+    	bindsym Return mode "default"
+    	bindsym Escape mode "default"
+	}
+
+	## modes
+	bindsym $mod+r mode "resize"
+
+# custom bindings
+	bindsym $mod+Return exec footclient
+	bindsym $mod+d exec wofi --show drun
+	bindsym $mod+i exec firefox-wayland
+	bindsym $mod+Shift+i exec torbrowser-launcher
+
+## brightness
+bindsym XF86MonBrightnessUp exec doas xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec doas xbacklight -dec 5
+
+## emoji
+bindsym $mod+period exec bemoji --private --type --noline --hist-limit 0

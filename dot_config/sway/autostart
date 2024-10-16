@@ -1,0 +1,8 @@
+exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+exec mako &
+exec foot --server &
+exec waybar &
+exec pipewire &
+exec bunx arrpc &
+exec syncthing --no-browser &

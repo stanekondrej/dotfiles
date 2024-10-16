@@ -1,0 +1,4 @@
+output * bg /home/ondrej/.wallpaper.png fill
+
+include ~/.config/sway/*
+include /etc/sway/config.d/*

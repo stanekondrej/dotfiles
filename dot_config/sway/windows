@@ -1,0 +1,3 @@
+gaps outer 10
+gaps inner 20
+default_border pixel 1

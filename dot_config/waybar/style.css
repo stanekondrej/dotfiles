@@ -1,0 +1,57 @@
+@import "rose-pine.css";
+
+* {
+	font-family: JetBrainsMono NFM;
+	font-size: 15px;
+	color: @text;
+}
+
+#waybar {
+	border-radius: 1rem;
+	background: transparent;
+}
+
+.modules-left,
+.modules-right {
+	background: @surface;
+	border-radius: 1rem;
+	padding: 2px 8px;
+}
+
+#workspaces {
+	margin: 5px;
+	border-radius: 1rem;
+}
+
+#workspaces button {
+	padding: 0.2rem;
+}
+
+#workspaces button.active {
+	border: 2px solid;
+	border-radius: 1rem;
+}
+
+#workspaces button.inactive {
+	color: @subtle;
+}
+
+#scratchpad {
+	color: @subtle;
+}
+
+#network {
+	color: @iris;
+}
+
+#wireplumber {
+	color: @pine;
+}
+
+#battery {
+	color: @foam;
+}
+
+#clock {
+	color: @subtle;
+}

@@ -1,0 +1,3 @@
+for_window {
+	[title="Extension: (Bitwarden Password Manager) - Bitwarden — Mozilla Firefox" app_id="Firefox"] floating enable; sticky enable;
+}

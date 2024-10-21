@@ -8,7 +8,7 @@ set $right l
 	bindsym $mod+Shift+q kill
 	floating_modifier $mod normal
 	bindsym $mod+Shift+c reload
-	bindsym $mod+Shift+e exec swaymsg exit
+	bindsym $mod+Shift+e exec ~/.scripts/wofi-power-menu --elogind
 
 	## moving focus
     bindsym $mod+$left focus left
@@ -80,6 +80,7 @@ set $right l
 	bindsym $mod+d exec wofi --show drun
 	bindsym $mod+i exec firefox-wayland
 	bindsym $mod+Shift+i exec torbrowser-launcher
+	bindsym $mod+t exec emacsclient -c
 
 ## brightness
 bindsym XF86MonBrightnessUp exec doas xbacklight -inc 5

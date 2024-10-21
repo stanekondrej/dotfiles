@@ -35,5 +35,8 @@ vim.g.termguicolors = true
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
+-- clipboard
+vim.o.clipboard = "unnamedplus"
+
 -- initialize lazy.nvim
 require("config.lazy")

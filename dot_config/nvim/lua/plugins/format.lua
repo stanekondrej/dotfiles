@@ -11,6 +11,7 @@ return {
 			javascriptreact = { "prettierd" },
 			svelte = { "prettierd" },
 			python = { "black", "isort" },
+			tex = { "latexindent" }
 		},
 		format_on_save = {
 			timeout_ms = 500,
